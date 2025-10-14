@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="thumbnail">
+        <img
+          id="imgThumb"
+          src="https://i.pinimg.com/564x/26/5d/3b/265d3b30f8d48c7acfc92d27d31c72ee.jpg"
+          alt="Current Song"
+        />
+      </div>
+      <div class="info">
+        <div class="details">
+          <div id="name" class="song-name">Song Name</div>
+          <div id="artist" class="artist-name">Artist Name</div>
+        </div>
+        <i class="fa-solid fa-heart"></i>
+      </div>
+      <div class="control">
+        <div class="progressbar">
+          <div class="progress-fill"></div>
+          <div class="progress-handle"></div>
+        </div>
+
+        <div class="control-btn">
+          <button id="shuffle" class="btn">
+            <i class="fa-solid fa-shuffle"></i>
+          </button>
+          <button id="prev" class="btn">
+            <i class="fa-solid fa-backward-step"></i>
+          </button>
+          <button id="play" class="btn play-btn">
+            <i class="fa-solid fa-play"></i>
+          </button>
+          <button id="next" class="btn">
+            <i class="fa-solid fa-forward-step"></i>
+          </button>
+          <button id="repeat" class="btn">
+            <i class="fa-solid fa-repeat"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

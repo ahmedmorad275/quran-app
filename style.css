@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+body {
+  background-color: #c4c4c4; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.container {
+  width: 95%;
+  max-width: 428px;
+  border-radius: 30px;
+  background-color: #fff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.thumbnail {
+  margin: 40px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+#imgThumb {
+  display: block;
+  width: 100%;
+}
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.song-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 4px;
+}
+.artist-name {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.fa-heart {
+  font-size: 24px;
+  color: #00000099;
+  cursor: pointer;
+}
+.control {
+  margin-top: 20px;
+}
+.progressbar {
+  position: relative;
+  height: 6px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.progress-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #4527a0;
+  border-radius: 10px;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+.progress-handle {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 15px;
+  height: 15px;
+  background-color: #4527a0;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: left 0.1s linear;
+  pointer-events: none;
+}
+.control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: #baa8ed;
+  cursor: pointer;
+}
+.btn i {
+  font-size: 25px;
+}
+.play-btn {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #4527a0;
+  color: #fff;
+  transform: scale(1.3);
+  text-align: center;
+}

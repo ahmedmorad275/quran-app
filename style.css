@@ -11,9 +11,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 .container {
+  margin-top: 1rem;
   width: 95%;
   max-width: 428px;
   border-radius: 30px;
@@ -35,6 +35,7 @@ body {
 }
 .info {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
 }
@@ -43,8 +44,10 @@ body {
   font-weight: bold;
   color: #000000;
   margin-bottom: 4px;
+  text-align: right;
 }
 .artist-name {
+  text-align: right;
   font-size: 16px;
   color: rgba(0, 0, 0, 0.6);
 }

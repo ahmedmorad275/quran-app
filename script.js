@@ -139,6 +139,7 @@ function loadSong(index) {
     3,
     0
   )}.mp3`;
+  console.log(audio.currentTime);
 }
 
 function playSong() {
@@ -212,5 +213,36 @@ heartBtn.addEventListener("click", (e) => {
     e.target.style.color = "orangered";
   } else {
     e.target.style.color = "#00000099";
+  }
+});
+document.addEventListener("keydown", (e) => {
+  if (e.code === "Space") {
+    isPlaying ? pauseSong() : playSong();
+    e.preventDefault();
+  }
+});
+// playback Time
+const currentTimeEl = document.getElementById("current-time");
+const durationEl = document.getElementById("duration");
+
+audio.addEventListener("timeupdate", () => {
+  // Update current time
+  const currentMinutes = Math.floor(audio.currentTime / 60);
+  const currentSeconds = Math.floor(audio.currentTime % 60);
+  currentTimeEl.textContent = `${String(currentMinutes).padStart(
+    2,
+    "0"
+  )}:${String(currentSeconds).padStart(2, "0")}`;
+
+  // Update duration
+  if (audio.duration) {
+    const durationMinutes = Math.floor(audio.duration / 60);
+    const durationSeconds = Math.floor(audio.duration % 60);
+    durationEl.textContent = `${String(durationMinutes).padStart(
+      2,
+      "0"
+    )}:${String(durationSeconds).padStart(2, "0")}`;
+  } else {
+    durationEl.textContent = "00:00";
   }
 });

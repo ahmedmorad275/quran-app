@@ -69,6 +69,9 @@ body {
   cursor: pointer;
   overflow: hidden;
 }
+.progressbar:hover{
+  transform: scaleY(2);
+}
 .progress-fill {
   position: absolute;
   left: 0;
